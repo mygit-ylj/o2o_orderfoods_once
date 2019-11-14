@@ -11,6 +11,9 @@
     <modules>
         <module>eureka_server</module>
         <module>config_server</module>
+        <module>o2o_gateway</module>
+        <module>product_service</module>
+        <module>common_api</module>
     </modules>
 
     <parent>
@@ -19,9 +22,11 @@
         <version>2.0.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
+        <spring.cloud.version>Finchley.SR1</spring.cloud.version>
+        <druid.version>1.1.10</druid.version>
     </properties>
 
 
@@ -30,9 +35,9 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <version>Finchley.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

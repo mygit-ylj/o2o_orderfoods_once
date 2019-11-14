@@ -5,5 +5,5 @@ spring:
     config:
       server:
         git:
-          uri:
-            search-paths:
+          uri: https://github.com/mygit-ylj/o2o_orderfoods
+          search-paths: config-repo
