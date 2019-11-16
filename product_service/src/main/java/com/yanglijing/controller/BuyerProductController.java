@@ -23,9 +23,10 @@ public class BuyerProductController {
 
     @CrossOrigin
     @GetMapping("/order_list")
-    public ResponseVO<List<ProductInfo>> selectProductList(@RequestBody ProductVo productVo){
+    public ResponseVO<List<ProductInfo>> selectProductList(ProductVo productVo){
 
         Page<ProductInfo> page = productService.selectByCondition(productVo);
+        System.out.println("1111111111111111111111111111111111111111111111111111");
         return ResponseVO.success(page);
     }
 
