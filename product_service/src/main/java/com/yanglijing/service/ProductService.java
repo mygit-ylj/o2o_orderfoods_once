@@ -1,6 +1,10 @@
 package com.yanglijing.service;
 
+import com.yanglijing.pojo.ProductCategory;
+import com.yanglijing.pojo.ProductInfo;
 import com.yanglijing.vo.BuyerProductInfoVO;
+import com.yanglijing.vo.ProductVo;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -13,4 +17,8 @@ import java.util.List;
  **/
 public interface ProductService {
     public List<BuyerProductInfoVO> selectAllProducts();
+
+    public Page<ProductInfo> selectByCondition(ProductVo productVo);
+
+    public List<ProductCategory> selectAllCats();
 }
