@@ -10,6 +10,7 @@ import com.yanglijing.vo.FoodVO;
 import com.yanglijing.vo.ProductVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
@@ -72,7 +73,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Page<ProductInfo> selectByCondition(ProductVo productVo) {
 
-        Specification<ProductInfo> specification = new Specification<ProductInfo>() {
+        Specification<ProductInfo> spec = new Specification<ProductInfo>() {
             @Override
             public Predicate toPredicate(Root<ProductInfo> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder cb) {
 
@@ -123,7 +124,8 @@ public class ProductServiceImpl implements ProductService {
             }
         };
 
-        return null;
+        Page<ProductInfo> page = productInfoRepository.findAll(spec, PageRequest.of(productVo.getPageNum() - 1, productVo.getPageSize()));
+        return page;
     }
 
     @Override

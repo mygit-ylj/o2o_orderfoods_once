@@ -15,13 +15,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/buyer/product")
-@CrossOrigin
+
 public class BuyerProductController {
 
     @Autowired
     private ProductService productService;
 
-    @GetMapping("/orde_list")
+    @CrossOrigin
+    @GetMapping("/order_list")
     public ResponseVO<List<ProductInfo>> selectProductList(@RequestBody ProductVo productVo){
 
         Page<ProductInfo> page = productService.selectByCondition(productVo);
