@@ -11,13 +11,6 @@ spring:
         filters:
         - StripPrefix=1
         order: 0
-      - id: sellProduct_route
-        uri: lb://product-service
-        predicates:
-        - Path=/sell/seller/**
-        filters:
-        - StripPrefix=1
-        order: 0
 eureka:
   client:
     service-url:

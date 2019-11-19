@@ -5,6 +5,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:10086/eureka
 spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
   datasource:
     url: jdbc:mysql://localhost:3306/ylj_data?characterEncoding=utf-8
     username: root
