@@ -15,13 +15,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/buyer/product")
+@CrossOrigin
 
 public class BuyerProductController {
 
     @Autowired
     private ProductService productService;
 
-    @CrossOrigin
     @GetMapping("/order_list")
     public ResponseVO<List<ProductInfo>> selectProductList(ProductVo productVo){
 

@@ -1,5 +1,5 @@
 server:
-  port: 10086
+  port: 10087
 eureka:
   client:
     service-url:
@@ -8,4 +8,3 @@ eureka:
     fetch-registry: true
   instance:
     hostname: localhost
-    nonSecurePort: ${server.port}

@@ -1,9 +1,9 @@
 server:
-  port: 8082
+  port: 8081
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:10086/eureka
+      defaultZone: http://localhost:10087/eureka
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
