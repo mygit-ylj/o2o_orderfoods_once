@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-server-register
+    name: eureka-server1
   cloud:
     config:
       uri: http://localhost:7000
